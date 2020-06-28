@@ -13,8 +13,6 @@ public class Main {
             fitsumArrayList.addAtIndex(2, "I");
             fitsumArrayList.addAtIndex(3, "here");
             fitsumArrayList.addAtIndex(2, "resized");
-          //  fitsumArrayList.addAtIndex(22, "hi");
-            //        fitsumArrayList.addAtIndex(0, 4);
 
             System.out.println(fitsumArrayList.getElement(2));
             System.out.println(fitsumArrayList.getSize());

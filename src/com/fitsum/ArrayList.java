@@ -45,6 +45,7 @@ public class ArrayList<T> implements ArrayListInterface{
             for (int i = size; i > index; i--) {
 
                 backingArray[i] = backingArray[i - 1];
+
             }
             backingArray[index] = data;
             size++;
