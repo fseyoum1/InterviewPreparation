@@ -1,5 +1,9 @@
 package com.fitsum;
 
+
+/*
+This is an arrayList implementation of mine 
+ */
 public class ArrayList<T> implements ArrayListInterface{
 
     private T[] backingArray;
