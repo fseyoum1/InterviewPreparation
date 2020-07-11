@@ -5,7 +5,6 @@ public class ArrayList<T> implements ArrayListInterface{
     private T[] backingArray;
     private int size;
 
-
     /*
     constructor
     since it is generic means we do not know the type we are just initializing using
