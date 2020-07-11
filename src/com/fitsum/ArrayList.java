@@ -2,7 +2,7 @@ package com.fitsum;
 
 
 /*
-This is an arrayList implementation of mine 
+This is an arrayList implementation of mine
  */
 public class ArrayList<T> implements ArrayListInterface{
 
@@ -56,6 +56,7 @@ public class ArrayList<T> implements ArrayListInterface{
       
     }
 
+    // This is sample 
     // implement add to the front
     public void addToFront(T data) {
 
