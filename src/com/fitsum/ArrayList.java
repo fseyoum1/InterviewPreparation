@@ -56,7 +56,7 @@ public class ArrayList<T> implements ArrayListInterface{
       
     }
 
-    // This is sample 
+    // This is sample
     // implement add to the front
     public void addToFront(T data) {
 

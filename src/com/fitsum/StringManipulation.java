@@ -11,7 +11,10 @@ public class StringManipulation {
 
         System.out.print("Reversed String is--> ");
         reverse(test);
-        System.out.printf("%d", lengthString(test));
+        //System.out.printf("%d", lengthString(test));
+        String str = "RADDAR";
+        System.out.println(str +" is palindrome " +isPalindrom(str));
+
     }
 
     public static void reverse(String ele) {
@@ -40,7 +43,6 @@ public class StringManipulation {
         System.out.println(reveseArr);
 
     }
-
     /*
     * Computing the length of the string
     *
@@ -76,6 +78,28 @@ public class StringManipulation {
         System.out.println(outP);
 
 
+    }
+
+    public static boolean isPalindrom(String str) {
+
+        //    RADDAR
+        int pointer = str.length();
+        int index = 0 ;
+        int firstIndex = 0;
+        int lastIndex = str.length() - 1;
+        //while(firstIndex != pointer/2) {
+        while(firstIndex > lastIndex) {
+
+            if (str.charAt(firstIndex) != str.charAt(lastIndex)) {
+
+                return false;
+            }
+
+            firstIndex++;
+            lastIndex--;
+
+        }
+        return true;
 
     }
 
