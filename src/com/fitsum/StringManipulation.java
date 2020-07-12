@@ -12,8 +12,13 @@ public class StringManipulation {
         System.out.print("Reversed String is--> ");
         reverse(test);
         //System.out.printf("%d", lengthString(test));
-        String str = "RADDAR";
+        String str = "too hot to HOOT";
         System.out.println(str +" is palindrome " +isPalindrom(str));
+
+        String strToUppercase = "apple";
+        System.out.println(toUppercase(strToUppercase));
+
+        toUpperChar(strToUppercase);
 
     }
 
@@ -86,11 +91,24 @@ public class StringManipulation {
         int pointer = str.length();
         int index = 0 ;
         int firstIndex = 0;
-        int lastIndex = str.length() - 1;
-        //while(firstIndex != pointer/2) {
-        while(firstIndex > lastIndex) {
 
-            if (str.charAt(firstIndex) != str.charAt(lastIndex)) {
+
+        // use replace method to remove spaces between characters
+        str = str.replace(" ", "").toLowerCase();
+        int lastIndex = str.length() - 1;
+
+        System.out.println("space removed " + str);
+
+
+        //while(firstIndex != pointer/2) {
+        while(firstIndex < lastIndex) {
+//            if(str.charAt(firstIndex) == ' ' && str.charAt(lastIndex) != ' ') {
+//                firstIndex++;
+//            } else if(str.charAt(lastIndex) == ' ' && str.charAt(firstIndex) != ' ') {
+//                lastIndex--;
+//            }
+
+            if ( str.charAt(firstIndex) != str.charAt(lastIndex)) {
 
                 return false;
             }
@@ -102,5 +120,60 @@ public class StringManipulation {
         return true;
 
     }
+
+
+    // changing Strings to uppercase
+    public static String toUppercase(String str) {
+
+        String upper = "";
+
+        //System.out.println((char)('B' + 32) );
+
+        for (int i = 0; i < str.length(); i++) {
+
+            int valueOne = (int)(str.charAt(i));
+            //int valueTwo = (int)(str.charAt(i));
+
+           if (valueOne >= 97 && (valueOne <= 122)) {
+                // small
+                char outPut = (char) (valueOne - 32);
+
+                upper = upper + outPut;
+            } else {
+                upper = upper + (char)valueOne;
+            }
+
+        }
+
+
+        return upper;
+    }
+
+    public static void toUpperChar(String str) {
+
+        char[] toUpper = str.toCharArray();
+        char[] outPut = new char[toUpper.length];
+        int i = 0;
+
+        while(i < toUpper.length) {
+
+            int var = (int)str.charAt(i);
+            if(var <= 90 && var >= 65) {
+
+                outPut[i] = (char)(var);
+
+            } else if(var <= 122 && var >= 97) {
+
+                outPut[i] = (char)(var - 32);
+
+            } else {
+                outPut[i] = toUpper[i];
+            }
+            i++;
+        }
+        System.out.println(outPut);
+
+    }
+
 
 }
