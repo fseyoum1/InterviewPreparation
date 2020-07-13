@@ -7,7 +7,10 @@ public class StringInter {
     public static void main(String[] args) {
 
         String str = "ARADHAYA'S BRILLIANCE CENTER";
+        String val = "984hh";
         countVowels(str);
+
+        stringCharater(val);
 
     }
 
@@ -64,5 +67,16 @@ public class StringInter {
             }
         }
 
+    }
+
+
+    public static void stringCharater(String str) {
+        char[] arr = str.toCharArray();
+
+        for(int i = 0; i < str.length(); i++) {
+            if(arr[i] >= '0' && arr[i] <= '9') {
+                System.out.println("Comparing numbers as a character");
+            }
+        }
     }
 }
