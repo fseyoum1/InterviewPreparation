@@ -1,9 +1,6 @@
 package com.fitsum;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class StringInter {
 
@@ -29,6 +26,17 @@ public class StringInter {
             System.out.print( output[i] + " ");
 
         }
+
+
+        int[] indices = findTwoSum(new int[] { 3, 1, 5, 7, 5, 9 }, 10);
+        if(indices != null) {
+            System.out.println(indices[0] + " " + indices[1]);
+        }
+
+
+
+
+
     }
 
     public static void countVowels(String str) {
@@ -101,7 +109,7 @@ public class StringInter {
         int arr2Len = arr2.length;
 
         String[] conArr = new String[arr1Len + arr2Len];
-        
+
         System.arraycopy(arr1, 0, conArr, 0, arr1Len);
         System.arraycopy(arr2, 0, conArr, arr1Len, arr2Len);
 
@@ -125,6 +133,32 @@ public class StringInter {
             i++;
         }
         return ou;
+    }
+    /*
+    
+    find the sum between two elements and return if the 
+    sum equals the "sum" given in the array and display the index of the first elements
+    which match when added to the sum given. You must return the result as an array, be efficent 
+     */
+    public static int[] findTwoSum(int[] list1, int sum) {
+        Map<Integer, Integer> myMap = new HashMap<>();
+
+        for (int i = 0; i < list1.length; i++) {
+
+            int value = sum - list1[i];
+            if (value == list1[i]) {
+                if (myMap.get(value) != null) {
+                    return new int[]{i, myMap.get(value)};
+                }
+
+                myMap.put(list1[i], i);
+
+            }
+            
+        }
+
+        return null;
+        
     }
 
 
